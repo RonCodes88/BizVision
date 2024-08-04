@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.home-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app-container {
+  border: 20px solid #101010ba; /* Example: 2px solid black border */
+  padding: 10px; /* Optional: Add some padding inside the border */
+  margin: 10px; /* Optional: Add some margin outside the border */
+}
+
