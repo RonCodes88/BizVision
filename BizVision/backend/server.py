@@ -15,7 +15,7 @@ def upload_image():
     image_data = image_data.split(",")[1]  # Remove the data URL prefix
     image_data = base64.b64decode(image_data)
     
-    image_path = "uploaded_image.jpg"
+    image_path = "BizVision/images/uploaded_image.jpg"
     with open(image_path, "wb") as f:
         f.write(image_data)
     
