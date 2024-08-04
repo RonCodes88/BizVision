@@ -62,8 +62,8 @@ const CustomWebcam = () => {
       <div className="flex">
       <Webcam
         className="mb-10"
-        height={1000}
-        width={1000}
+        height={8000}
+        width={800}
         mirrored={true}
         ref={webcamRef}
         screenshotFormat="image/jpeg"

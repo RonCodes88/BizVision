@@ -13,5 +13,8 @@ export default defineConfig(({ mode }) => {
     css: {
       postcss: "./postcss.config.js",
     },
+    build: {
+      outDir: "dist",
+    },
   };
 });
