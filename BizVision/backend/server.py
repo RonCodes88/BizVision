@@ -6,22 +6,29 @@ import stripe
 import os
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+CORS(app, origins=["https://biz-vision.vercel.app"])  # Allow requests from your Vercel domain
 
 @app.route('/upload-photo', methods=['POST'])
 def upload_image():
-    data = request.get_json()
-    image_data = data['image']
-    image_data = image_data.split(",")[1]  # Remove the data URL prefix
-    image_data = base64.b64decode(image_data)
-    
-    image_path = "BizVision/images/uploaded_image.jpg"
-    with open(image_path, "wb") as f:
-        f.write(image_data)
-    
-    processing_result = process_image(image_path)
+    try:
+        data = request.get_json()
+        if 'image' not in data:
+            return jsonify({"error": "No image data provided"}), 400
 
-    return jsonify({"result": processing_result}), 200  # Return the result as JSON
+        image_data = data['image']
+        image_data = image_data.split(",")[1]  # Remove the data URL prefix
+        image_data = base64.b64decode(image_data)
+        
+        image_path = "BizVision/images/uploaded_image.jpg"
+        os.makedirs(os.path.dirname(image_path), exist_ok=True)
+        with open(image_path, "wb") as f:
+            f.write(image_data)
+        
+        processing_result = process_image(image_path)
+
+        return jsonify({"result": processing_result}), 200  # Return the result as JSON
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
 # Example mapping of item names to Stripe price IDs
