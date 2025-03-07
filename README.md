@@ -11,8 +11,7 @@ BizVision is an AI-powered computer vision assistant designed to help blind busi
 - **AI-Powered Insights**: Provides business owners with valuable insights into customer behavior, stock trends, and potential risks.
 
 ## Demo
-
-![BizVision Demo](https://www.youtube.com/watch?v=7fGWVv-SWHg)
+https://www.youtube.com/watch?v=7fGWVv-SWHg
 
 ## Tech Stack
 
