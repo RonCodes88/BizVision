@@ -8,7 +8,7 @@ BizVision is an AI-powered computer vision assistant designed to help blind busi
 - **Theft & Disaster Detection**: Fine-tuned Google Gemini AI to detect thefts, accidents, or other dangerous situations, ensuring safety and security for the business.
 - **Inventory Management**: Integrated tools to track stock, update inventory in real-time, and avoid mismanagement.
 - **Payment Handling**: Seamless integration with Stripe for secure transactions and easy payment management.
-- **AI-Powered Insights**: Provides business owners with valuable insights into customer behavior, stock trends, and potential risks.
+- **AI-Powered Insights**: Provides business owners with valuable insights into customer behavior and potential risks.
 
 ## Demo
 https://www.youtube.com/watch?v=7fGWVv-SWHg
